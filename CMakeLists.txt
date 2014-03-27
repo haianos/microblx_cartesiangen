@@ -44,13 +44,11 @@ link_directories(
     ${KDL_LIBRARY_DIRS}
 )
 include_directories(
+    ${UBX_INCLUDE_DIR}
     ${KDL_INCLUDE_DIRS}
     ${KDL_TYPES_INCLUDE_DIRS}
 )
 
-include_directories(${KDL_INCLUDE_DIR})
-include_directories(${UBX_INCLUDE_DIR})
-include_directories(${KDL_TYPES_INCLUDE_DIR})
  
 add_library(cart_trajgen SHARED cart_trajgen.cpp)
 set_target_properties(cart_trajgen PROPERTIES PREFIX "") 
